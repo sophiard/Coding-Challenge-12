@@ -30,3 +30,19 @@ const metricCardArray = [...metricCards];
         card.style.backgroundColor = "pink"; //color of box is pink
     });
 
+// Task 3 - Implemented Dynamic Inventory List
+
+const inventoryList = document.getElementById('inventoryList');
+function addInventoryItem(productName) { 
+    //adds a new item to inventory 
+    const listItem = document.createElement('li');
+    listItem.setAttribute('class','product-item');  
+    listItem.setAttribute('data-product', productName); 
+    listItem.textContent = productName; 
+//created a list items iwth class, procut utems, data procuct  
+    listItem.addEventListener('click', () =>{
+        inventoryList.removeChild(listItem); 
+    });//removed itesm from list if clicked 
+    inventoryList.appendChild(listItem);
+} //adds new item 
+

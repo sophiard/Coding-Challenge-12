@@ -13,18 +13,18 @@
         .metric-card {
             padding: 10px;
             margin: 10px;
-            background-color: lightgray;
+            background-color: rgb(183, 18, 153);
             border-radius: 5px;
             display: inline-block;
         }
         .product-item {
             cursor: pointer;
-            color: blue;
+            color: rgb(206, 16, 187);
         }
         .customer-card {
             padding: 10px;
             margin: 5px;
-            background-color: lightblue;
+            background-color: rgb(237, 186, 206);
             border-radius: 5px;
             cursor: pointer;
         }
@@ -35,23 +35,36 @@
 </head>
 <body>
 
-    <h1>Interactive Business Dashboard</h1>
+    <h1>Business Dashboard</h1>
 
-    <!-- Dashboard Metrics Section -->
+
+   
     <h2>Dashboard Metrics</h2>
     <div id="dashboard"></div>
 
-    <!-- Inventory List Section -->
+   
+    <div class="metric-card">
+    <h3>Profit</h3>
+    <p>$6,600</p>
+    </div>
+    <div class="metric-card">
+    <h3>Expenses</h3>
+    <p>$5,555</p>
+    </div>
+
+  
     <h2>Inventory List</h2>
     <ul id="inventoryList"></ul>
-    <button onclick="addInventoryItem('Laptop')">Add Laptop</button>
-    <button onclick="addInventoryItem('Smartphone')">Add Smartphone</button>
+    <button onclick="addInventoryItem('Cat Food')">Cat Food</button>
+    <button onclick="addInventoryItem('Dog Food')">Dog Food</button>
 
-    <!-- Customer Section -->
     <h2>Customer Section</h2>
-    <div id="customerSection"></div>
+    <div id="customerSection">
+        <div class="customer-card">Customer 1</div>
+        <div class="customer-card">Customer 2</div>
+        <div class="customer-card">Customer 3</div>
+    </div>
 
-    <!-- Link to JavaScript File -->
     <script src="cc_12.js"></script>
 
 </body>
