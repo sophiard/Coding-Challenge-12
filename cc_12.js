@@ -46,3 +46,15 @@ function addInventoryItem(productName) {
     inventoryList.appendChild(listItem);
 } //adds new item 
 
+// Task 4 - Demonstrated Event Bubbling in Customer Section 
+const customerSection = document.getElementById('customerSection');
+function addCustomerCard(customerName) {  //created a function that adds a new customer 
+    const customerCard = document.createElement('div'); //created card
+    customerCard.setAttribute('class', 'customer-card'); //set class
+    customerCard.textContent = customerName;//added name
+    customerCard.addEventListener('click', (event) => {
+        console.log("Customer card clicked");
+        event.stopPropagation();
+    }); 
+    customerSection.appendChild(customerCard); //added card
+}
