@@ -18,3 +18,15 @@ revenueCard.innerHTML = `
 
 dbContainer.appendChild(revenueCard);
 // Adds the new metric card to the dashboard container.
+
+
+//  Task 2 - Updated Metric Cards via Array Conversion
+const metricCards = document.querySelectorAll(".metric-card");
+// selected all the metric cards 
+const metricCardArray = [...metricCards];  
+ metricCardArray.forEach(card => {
+        const title = card.querySelector("h3");
+        title.innerText += " - Updated"; //shows updated when updated
+        card.style.backgroundColor = "pink"; //color of box is pink
+    });
+
